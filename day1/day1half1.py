@@ -3,14 +3,14 @@ from math import floor
 import sys
 
 
-def fuel_for_mass(mass):
+def fuel_for_mass(mass: int) -> int:
     return floor(mass / 3) - 2
 
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
         print(f"usage: {__file__} <inputfile>\n\nTests:")
-    
+
         for x in (12, 14, 1969, 100756):
             print(f"- mass {x} requires {fuel_for_mass(x)} fuel")
 
